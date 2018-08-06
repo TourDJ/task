@@ -7,16 +7,16 @@ class TaskItem extends React.Component {
         this.handleDelete = this.handleDelete.bind(this);
     }
 
-   handleDelete() {
+    handleDelete() {
         this.props.delete(this.props.index);
-   }
+    }
 
-   render() {
+    render() {
         const { content } = this.props;
         return (
             <div onClick={this.handleDelete}>{content}</div>
         )
-   }
+    }
 } 
 
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TaskItem from './TaskItem';
+import Clock from './Clock';
 import logo from './logo.svg';
 /* import './App.css'; */
 
@@ -40,7 +41,8 @@ class Task extends Component {
     }
 
     TaskItems() {
-       return ( 
+        return 
+            ( 
                 this.state.list.map((item, index) => {
                     return <TaskItem delete={this.handleDelete.bind(this)} key={index} content={item} index={index} />
                 })
@@ -51,8 +53,9 @@ class Task extends Component {
     return (
       <div>
         <div>
-        <input value={this.state.inputValue} onChange={this.handleChange.bind(this)}/>
-        <button onClick={this.handleClick.bind(this)}>add</button>
+            <input value={this.state.inputValue} onChange={this.handleChange.bind(this)}/>
+            <button onClick={this.handleClick.bind(this)}>add</button>
+            <Clock />  
         </div>
         <ul>
             {this.TaskItems()}
