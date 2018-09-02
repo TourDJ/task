@@ -14,7 +14,7 @@ class TaskItem extends React.Component {
     render() {
         const { content } = this.props;
         return (
-            <div onClick={this.handleDelete}>{content}</div>
+            <li onClick={this.handleDelete}>{content}</li>
         )
     }
 } 
